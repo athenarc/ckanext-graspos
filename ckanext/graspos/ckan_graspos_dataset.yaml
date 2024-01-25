@@ -46,29 +46,37 @@ dataset_fields:
   validators: ignore_missing unicode_safe package_version_validator
   form_placeholder: '1.0'
 
-- field_name: author
-  label: Author
+- field_name: authors
+  label: Authors
+  form_snippet: markdown.html
+  form_placeholder: Authors info
+
+- field_name: api_url
+  label: API Endpoint URL
+  form_placeholder: http://example-api.org
+  display_snippet: link.html
+
+- field_name: api_instructions
+  label: API basic instructions
+  form_snippet: textarea.html
+  form_placeholder: eg. rate limit
+
+- field_name: documentation_url
+  label: Documentation URL
+  form_placeholder: http://example-documentation.org
+  display_snippet: link.html
+
+- field_name: contact_person
+  label: Contant Person
   form_placeholder: Joe Bloggs
   display_property: dc:creator
 
-- field_name: author_email
-  label: Author Email
+- field_name: contact_person_email
+  label: Contant Person Email
   form_placeholder: joe@example.com
   display_property: dc:creator
   display_snippet: email.html
   display_email_name_field: author
-
-- field_name: maintainer
-  label: Maintainer
-  form_placeholder: Joe Bloggs
-  display_property: dc:contributor
-
-- field_name: maintainer_email
-  label: Maintainer Email
-  form_placeholder: joe@example.com
-  display_property: dc:contributor
-  display_snippet: email.html
-  display_email_name_field: maintainer
 
 
 resource_fields:
